@@ -1,0 +1,181 @@
+---
+title: 'Assignment 3: Melvin''s Performance Anaylsis'
+author: "Jingyi(Abby) Liu"
+date: "9/14/2018"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+First, clean the data by transform the column 'goal' into numerical. Replace 'Y' or 'y' by 1 and replace 'N' by 0.
+```{r}
+setwd('/Users/liujingyi/Documents/MSBA/6211/Homework/3.0')
+#Import the data
+df<-read.csv("kicksfootball.csv", header = TRUE, stringsAsFactors = FALSE)
+names(df) <- c('yards', 'goal', 'practiceormatch')
+#Clean the data
+df[df == 'Y'|df == 'y']<-1
+df[df == 'N']<-0
+df$goal <- as.numeric(df$goal)
+
+```
+
+```{r}
+summary(df)
+```
+
+
+
+### Part A 
+How would you describe Melvin???s overall record?
+1. In general, the probability that Melvin will hit the goal. 
+```{r}
+P1 = (nrow(subset(df, goal == 1)))/(nrow(df))
+P1 = sprintf("%.4f", P1)
+paste("Probability that Melvin will hit the goal",P1)
+```
+2. Will the probabilty be influenced by the nature of the attempts?(practice or match?)
+```{r}
+#Probability that Melvin will hit the goal on a match
+Pm = (nrow(subset(df, practiceormatch == 'M'& goal == 1)))/
+  (nrow(subset(df, practiceormatch == 'M')))
+Pm = sprintf("%.4f", Pm)
+paste("Probability that Melvin will hit the goal on a match is",Pm)
+
+#Probability that Melvin will hit the goal on a practice
+Pp = (nrow(subset(df, practiceormatch == 'P'& goal == 1)))/
+  (nrow(subset(df, practiceormatch == 'P')))
+Pp = sprintf("%.4f", Pp)
+paste("Probability that Melvin will hit the goal on a practice is",Pp)
+```
+Melvin's rate of success on a practice is sligtly higher than that on a game.
+
+3. Explore how the probability is influenced by the distance.
+```{r}
+Yards=seq(18,62,by=1)
+Prab=rep(0,length(18:62))
+#Output the probility of 'Y' under each 'yards'
+for (i in 18:62) {
+  a = subset(df, yards == i)
+  Prab[i] = (nrow(subset(a, goal == 1)))/(nrow(a))
+}
+data.frame(Yards, Prab[18:62])
+
+```
+In general, with the increasement of 'yards', the probability that Melvin will hit the goal decreased.
+```{r}
+# Visualize the relationship between yards and probability of scoring
+plot(Yards, Prab[18:62], type="l",
+     xlab="yards",
+     ylab="Prob(Y)",
+     col="blue",lwd=2)
+```
+
+### Part B 
+.Write out the logistic function for:
+(1)Practices
+
+The logistic function for practice =  log (P(y=1)/(1???P(y=1))) =b0+b1x,
+For our equation b0 = 5.58180 and b1 = -0.10672.
+```{r}
+#Select all the practice
+df_p = subset(df, practiceormatch == 'P')
+
+# fit a logistic regression model
+practice.log = glm(goal ~ yards, data=df_p,
+             family=binomial)
+
+#See the results contained in goal.log
+summary(practice.log)
+
+```
+```{r}
+# plot with yards on x-axis and sccoring or not (0 or 1) on y-axis
+plot(goal~yards,data=df_p,
+     xlab="yards", ylab="Probability of scoring on a practice")
+curve(predict(practice.log, data.frame(yards=x),
+              type="resp"),
+      add=TRUE)
+```
+(2)Matches
+
+The logistic function for practice =  log (P(y=1)/(1???P(y=1))) =b0+b1x,
+For our equation b0 = 6.83393 and b1 = -0.14147 .
+```{r}
+#Select all the match
+df_m = subset(df, practiceormatch == 'M')
+
+# fit a logistic regression model
+match.log = glm(goal ~ yards, data=df_m,
+             family=binomial)
+
+#See the results contained in goal.log
+summary(match.log)
+```
+
+```{r}
+# plot with yards on x-axis and sccoring or not (0 or 1) on y-axis
+plot(goal~yards,data=df_m,
+     xlab="yards", ylab="Probability of scoring on a match")
+curve(predict(match.log, data.frame(yards=x),
+              type="resp"),
+      add=TRUE)
+```
+b) What is the probability of Melvin scoring a goal when he kicks from 20, 40 and 60 yards in
+practice?
+Answer:The probabilities are 0.9692, 0.7880 and 0.3054
+```{r}
+inp <- c(20,40,60)
+
+newdata = data.frame(yards=inp)
+
+predict(practice.log, newdata, type="response")
+```
+c) What is the probability of Melvin scoring a goal when he kicks from 20, 40 and 60 yards in
+matches?
+Answer:The probabilities are 0.9821, 0.7641 and 0.1605
+```{r}
+inp <- c(20,40,60)
+newdata = data.frame(yards=inp)
+
+predict(match.log, newdata, type="response")
+```
+
+### Part C
+Plot the logistic models
+```{r}
+library(ggplot2)
+
+yards_ <- c(18:62)
+Probability = predict(practice.log, data.frame(yards=c(yards_)), type="response")
+P_match = predict(match.log, data.frame(yards=c(yards_)), type="response")
+
+df1 <- data.frame(yards_,Probability )
+g <- ggplot(df1)
+g <- g + geom_line(aes(x=yards_,y=Probability ,color='practice'))
+g <- g + geom_line(aes(x=yards_,y=P_match,color='match'))
+print(g)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
