@@ -1,6 +1,6 @@
 # Programming-for-Business-Analytics
 Homeworks and Projects for DNSC 6211 Programming for Business Analytics
-## Homework 2
+## Homework 2(https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/A02a_G44206031.R)
 ## Part A
 
 The dataset mtcars was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models). 
