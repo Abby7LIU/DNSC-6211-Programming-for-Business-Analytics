@@ -3,7 +3,7 @@ Homeworks and Projects for DNSC 6211 Programming for Business Analytics
 
 1. [Homework 1](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/Homework1.R)
 2. [Homework 2](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/A02a_G44206031.R)
-3. Homework 3
+3. [Homework 3] (https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/Assignment%203:%20Melvin’s%20Performance%20Anaylsis.pdf)
 
 ## Homework 1
 
