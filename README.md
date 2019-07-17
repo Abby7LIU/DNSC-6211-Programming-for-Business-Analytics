@@ -39,7 +39,6 @@ If fToC is called as
 
 Note that all responses are rounded to 2 decimal places. 
 
-Name your file as A01a_Gwid.R. So if your GWID is G19860011 then you should name your submission file as A01a_G19860011.R. Please make sure that you comment your R code. 
 
 ### Part B 
 
@@ -114,9 +113,6 @@ b. Draw 50 samples of size 15 from the sampling frame in part a, and plot the sa
 c. Draw 50 samples of size 45 from the sampling frame in part a, and plot the sampling distribution of means as a histogram. 
 
 d. Explain CLT in your own words in one or two sentences based on your answers to parts b and c. 
-
-Name your file as A02c_Gwid.r. So if your GWID is G19860011 then you should name your submission file as A02c_G19860011.r. Please make sure that you comment your R code. 
-
 
 
 
