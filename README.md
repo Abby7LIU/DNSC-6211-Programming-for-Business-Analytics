@@ -1,5 +1,43 @@
 # Programming-for-Business-Analytics
 Homeworks and Projects for DNSC 6211 Programming for Business Analytics
+
+## Homework 1
+
+### Part A
+
+ Write your own functions to do the following: 
+
+```R
+cToF <- function(tempInC) {
+  compute temperature in degree farenheit
+  return temperature
+```
+
+} 
+
+```R
+fToC <- function(tempInF) {
+  compute temperature in degree celcius
+  return celcius
+```
+
+} 
+
+The output should look like the following:
+ If cToF is called as
+ cToF(28)
+ Your calling program should print out the following
+ 28.00 degrees celcius is 82.40 degrees farenheit 
+
+If fToC is called as
+ fToC(78)
+ Your calling program should print out the following
+ 78.00 degrees farenheit is 25.56 degrees celcius 
+
+Note that all responses are rounded to 2 decimal places. 
+
+
+
 ## [Homework 2](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/A02a_G44206031.R)
 
 ### Part A
