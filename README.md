@@ -1,7 +1,8 @@
 # Programming-for-Business-Analytics
 Homeworks and Projects for DNSC 6211 Programming for Business Analytics
-## Homework 2(https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/A02a_G44206031.R)
-## Part A
+## [Homework 2](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/A02a_G44206031.R)
+
+### Part A
 
 The dataset mtcars was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models). 
 
@@ -12,14 +13,14 @@ The dataset mtcars was extracted from the 1974 Motor Trend US magazine, and comp
 5. Report the mpg at each of the 25th, 50th, and 75th percentiles. 
 6. Report and interpret the interquartile range for the mpg. 
 
-## Part B 
+### Part B 
 
 Using the same dataset mtcars that you used in Part A, complete the following using the slides (Basic plots.pdf) 
 
 1. Draw a scatterplot with mpg on the y axis and displacement on the x axis. What does the graph tell you (one or two sentences)? 
 2. Draw histograms for mpg by am in the same plot. What does the graph tell you (one or two sentences)? 
 
-## Part C (20 marks) 
+### Part C 
 
 All of you must have heard about the central limit theorem (CLT). If not, have a look at this video. 
 
