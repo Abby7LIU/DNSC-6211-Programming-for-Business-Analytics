@@ -12,18 +12,17 @@ Homeworks and Projects for DNSC 6211 Programming for Business Analytics
 ```R
 cToF <- function(tempInC) {
   compute temperature in degree farenheit
-  return temperature
+  return temperature}
 ```
 
-} 
+
 
 ```R
 fToC <- function(tempInF) {
   compute temperature in degree celcius
-  return celcius
+  return celcius} 
 ```
 
-} 
 
 The output should look like the following:
  If cToF is called as
@@ -51,19 +50,17 @@ Name your response file as A01b_Gwid.docx. So if your GWID is G19860011 then you
 K=seq(10,70,by=5)
 p=rep(0,length(K))
 ```
-
-**for** (i **in** 1:length(K)) { n=1 
+for (i in 1:length(K)) { n=1 
 
 prod=1
- **while** (n<K[i]) { 
+while (n<K[i]) { 
 
-```
     prod=prod*(1-n/365)
-```
+
 
 n=n+1 } 
 
-```
+
   p[i]=1-prod
 }
 plot(K, p, type="l",
