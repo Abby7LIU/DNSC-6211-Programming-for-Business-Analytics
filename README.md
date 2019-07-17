@@ -49,7 +49,7 @@ Name your response file as A01b_Gwid.docx. So if your GWID is G19860011 then you
 ## Birthday problem
 K=seq(10,70,by=5)
 p=rep(0,length(K))
-```
+
 for (i in 1:length(K)) { n=1 
 
 prod=1
