@@ -1,6 +1,8 @@
 # Programming-for-Business-Analytics
 Homeworks and Projects for DNSC 6211 Programming for Business Analytics
 
+#### [Homework 2](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/A02a_G44206031.R)
+
 ## Homework 1
 
 ### Part A
@@ -36,6 +38,39 @@ If fToC is called as
 
 Note that all responses are rounded to 2 decimal places. 
 
+Name your file as A01a_Gwid.R. So if your GWID is G19860011 then you should name your submission file as A01a_G19860011.R. Please make sure that you comment your R code. 
+
+### Part B 
+
+Consider the following code provided by Dr. Soyer. Please explain what the code in the enclosed box does in the context of the birthday problem. Please make sure that you explain why we need two loops and please explain the role of p[i] and prod. 
+
+Name your response file as A01b_Gwid.docx. So if your GWID is G19860011 then you should name your submission file as A01b_G19860011.docx. Please make sure that you answer both parts of Part B in one file on separate pages. 
+
+```R
+## Birthday problem
+K=seq(10,70,by=5)
+p=rep(0,length(K))
+```
+
+**for** (i **in** 1:length(K)) { n=1 
+
+prod=1
+ **while** (n<K[i]) { 
+
+```
+    prod=prod*(1-n/365)
+```
+
+n=n+1 } 
+
+```
+  p[i]=1-prod
+}
+plot(K, p, type="l",
+     xlab="number of people",
+     ylab="Prob(same birthday)",
+     col="blue",lwd=2)
+```
 
 
 ## [Homework 2](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/A02a_G44206031.R)
