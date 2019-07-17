@@ -114,5 +114,37 @@ c. Draw 50 samples of size 45 from the sampling frame in part a, and plot the sa
 
 d. Explain CLT in your own words in one or two sentences based on your answers to parts b and c. 
 
+## Homework 3
+
+ Use the file **kicksfootball.csv** for this assignment. 
+
+Coach Trayvon kept a record of all field goals that Melvin attempted in practice sessions and practice matches. 
+
+### Part A
+
+How would you describe Melvin’s overall record? Describe your prediction regarding Melvin’s attempts at field goals? (Hint: make this easy on yourselves by sticking to computing simple probabilities; I don’t want anything more sophisticated than that) 
+
+### Part B
+
+Do Melvin’s attempts in matches differ from his performance in practice? Use the handout I have provided for logistic regression for this question. 
+
+a) Write out the logistic function for i. Practice, and 
+
+ii. Matches 
+
+1. b)  What is the probability of Melvin scoring a goal when he kicks from 20, 40 and 60 yards in 
+
+   practice? 
+
+2. c)  What is the probability of Melvin scoring a goal when he kicks from 20, 40 and 60 yards in 
+
+   matches? 
+
+### Part C
+
+Using ggplot, plot the logistic models for his performance in matches as well as in practice **in a single** 
+
+**plot**. Make sure that the plot has a title, labels for X and Y axes, and a legend. 
+
 
 
