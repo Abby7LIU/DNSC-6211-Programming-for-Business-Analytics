@@ -161,7 +161,7 @@ The marketing managers of an office products company have some difficulty in eva
 
 **Part D** : Once you have completed Parts A, B, and C, please write a brief report (not to exceed 500 words) to the marketing managers and explain your findings; the managers are not familiar with the technical language of statistics, although they do have an idea what a standard deviation is. 
 
-## Assignment 5 R shiny 
+## Assignment 5： R shiny 
 
 This assignment is based on RShiny. You need to build a Shiny application. The dataset for this application comes from Open Charlotte. 
 
