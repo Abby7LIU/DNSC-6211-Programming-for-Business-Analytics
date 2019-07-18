@@ -115,7 +115,7 @@ c. Draw 50 samples of size 45 from the sampling frame in part a, and plot the sa
 
 d. Explain CLT in your own words in one or two sentences based on your answers to parts b and c. 
 
-## Assignmnet 3 Logistic Regression
+## Assignmnet 3: Logistic Regression
 
  Use the file **kicksfootball.csv** for this assignment. 
 
@@ -161,7 +161,7 @@ The marketing managers of an office products company have some difficulty in eva
 
 **Part D** : Once you have completed Parts A, B, and C, please write a brief report (not to exceed 500 words) to the marketing managers and explain your findings; the managers are not familiar with the technical language of statistics, although they do have an idea what a standard deviation is. 
 
-## Assignment 5： R shiny 
+## Assignment 5：R shiny 
 
 This assignment is based on RShiny. You need to build a Shiny application. The dataset for this application comes from Open Charlotte. 
 
@@ -180,7 +180,7 @@ Determine and provide the maximum for the two sliders based on the file that you
 Your submission should be either one file named app.R or two files names ui.R and server.R. Assume that the data file is in the same folder as the markdown. This way you do not have to set path. 
 
 
-## Assignment 06 Kaggle Competition
+## Assignment 06: Kaggle Competition
 
 This assignment is based on the Prudential Life Insurance Assessment challenge in Kaggle. Please feel free to explore and learn from what other users have done. This is not an assessment of how well you model; but an assessment of whether you can perform the machine learning workflow and submit your solution to Kaggle successfully. The two learning goals of this assignment are:
 
