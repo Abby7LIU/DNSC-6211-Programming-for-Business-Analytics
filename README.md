@@ -1,10 +1,14 @@
 # Programming-for-Business-Analytics
 Homeworks and Projects for DNSC 6211 Programming for Business Analytics
 
+## - R stuido, R markdown and R shiny
 1. [Assignment 1: Basic practices](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/Homework1.R)
 2. [Assignment 2: Functions](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/A02a_G44206031.R)
 3. [Assignmnet 3: Logistic Regression](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/Assignment%203:%20Melvin’s%20Performance%20Anaylsis.pdf)
 4. [Assignment 4: Evaluating Sales Performance](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/A04_G44206031.Rmd)
+
+
+## - Python (Jupyter notebook and spyder)
 
 ## Assignment 01: Basic practices
 
