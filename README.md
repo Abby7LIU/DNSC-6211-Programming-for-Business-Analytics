@@ -13,9 +13,9 @@ Homeworks and Projects for DNSC 6211 Programming for Business Analytics
 #### -- Individual Project: R shiny
 - [App description](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/App%20Description.pdf)
 - [Step 1: Clean the data](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/Clean%20the%20data.R)
-- [Dataset]
-- [app.R(R command for the shiny app)]
-- [Styles.css]
+- [Dataset](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/revised.csv)
+- [app.R(R command for the shiny app)](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/app.R)
+- [Styles.css](https://github.com/Abby7LIU/Programming-for-Business-Analytics)
 
 ### - Python (Jupyter notebook and spyder)
 
