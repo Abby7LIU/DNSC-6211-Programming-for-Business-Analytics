@@ -7,6 +7,7 @@ Homeworks and Projects for DNSC 6211 Programming for Business Analytics
 3. [Assignmnet 3: Logistic Regression](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/Assignment%203:%20Melvin’s%20Performance%20Anaylsis.pdf)
 4. [Assignment 4: Evaluating Sales Performance](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/A04_G44206031.Rmd)
 5. [Assignment 5: R shiny](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/app.R)
+6. [Assignment 6: Kaggle Competition](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/A06.Rmd)
 
 
 ### - Python (Jupyter notebook and spyder)
