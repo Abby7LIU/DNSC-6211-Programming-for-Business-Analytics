@@ -10,7 +10,8 @@ Homeworks and Projects for DNSC 6211 Programming for Business Analytics
 5. [Assignment 5: R shiny](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/app.R)
 6. [Assignment 6: Kaggle Competition](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/A06.Rmd)
 
-#### -- Individual Project: R shiny 
+#### -- Individual Project: 
+R shiny -- web interact apps
 
 
 ### - Python (Jupyter notebook and spyder)
