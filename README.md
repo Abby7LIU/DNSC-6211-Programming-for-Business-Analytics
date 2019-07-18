@@ -161,4 +161,20 @@ The marketing managers of an office products company have some difficulty in eva
 
 **Part D** : Once you have completed Parts A, B, and C, please write a brief report (not to exceed 500 words) to the marketing managers and explain your findings; the managers are not familiar with the technical language of statistics, although they do have an idea what a standard deviation is. 
 
+## Assignment 5 R shiny 
 
+This assignment is based on RShiny. You need to build a Shiny application. The dataset for this application comes from Open Charlotte. 
+
+**Part A** 
+
+Provide a widget to read a csv file (any csv file). I will Test with the file named CMPD_Employee_Demographics.csv that is provided to you. 
+
+**Part B** 
+
+Provide two slider widgets as shown above to show the row numbers and the column numbers of the data frame that is read. For instance if the “Number of rows to show” has a minimum of 2 and a maximum of 11, rows 2 through 11 will be shown in the Main panel. Similarly, if “Number of columns to show” has a minimum of 1 and a maximum of 3, columns 1 through 3 will be shown in the Main panel. 
+
+**Part C** 
+
+Determine and provide the maximum for the two sliders based on the file that you read. 
+
+Your submission should be either one file named app.R or two files names ui.R and server.R. Assume that the data file is in the same folder as the markdown. This way you do not have to set path. 
