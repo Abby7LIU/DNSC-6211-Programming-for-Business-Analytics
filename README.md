@@ -9,6 +9,7 @@ Homeworks and Projects for DNSC 6211 Programming for Business Analytics
 4. [Assignment 4: Evaluating Sales Performance](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/A04_G44206031.Rmd)
 5. [Assignment 5: R shiny](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/app.R)
 6. [Assignment 6: Kaggle Competition](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/A06.Rmd)
+7. [Assignment 7: Efficient Frontier](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/Assignment%207.pdf)
 
 #### -- Individual Project: R shiny
 - [App description](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/App%20Description.pdf)
@@ -21,7 +22,9 @@ Homeworks and Projects for DNSC 6211 Programming for Business Analytics
 ![Page 1](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/Page%201.png)
 ![Page 2](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/Page%202.png)
 ![Page 3](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/Page%203.png)
+
 ### - Python (Jupyter notebook and spyder)
+
 
 ## Assignment 01: Basic practices
 
