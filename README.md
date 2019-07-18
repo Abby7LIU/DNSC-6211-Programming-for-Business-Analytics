@@ -17,6 +17,9 @@ Homeworks and Projects for DNSC 6211 Programming for Business Analytics
 - [app.R(R command for the shiny app)](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/app.R)
 - [Styles.css](https://github.com/Abby7LIU/Programming-for-Business-Analytics)
 
+###### - Overview of the app
+![Page 1](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/Page%201.png)
+
 ### - Python (Jupyter notebook and spyder)
 
 ## Assignment 01: Basic practices
