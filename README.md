@@ -147,5 +147,18 @@ Using ggplot, plot the logistic models for his performance in matches as well as
 
 **plot**. Make sure that the plot has a title, labels for X and Y axes, and a legend. 
 
+## Assignment 4: Evaluating Sales Performance
+
+The marketing managers of an office products company have some difficulty in evaluating the field sales representatives' performance. The representatives travel among the outlets for the company's products, create displays, try to increase volume, introduce new products, and discover any problems that the outlets are having with the company's products. The job involves a great deal of travel time. The marketing managers believe that one important factor in the representatives' performance is the motivation to spend a great deal of time on the road. Other variables also have an effect. Some sales districts have more potential than others, either because of differences in population or differences in the number of retail outlets. Large districts are difficult because of the extra travel time. One important variable is compensation. Some of the representatives are paid a salary plus a commission on sales; others work entirely for a larger commission on sales. The marketing managers suspect that there is a difference between the two groups in their effectiveness, although some of them argue that the important factor is the combination of commission status and number of outlets. In particular, they suspect that commission- only representatives with many outlets to cover are highly productive. Also, the managers suspect that profit may be inflated for representatives with many outlets; they would prefer measuring profit per outlet. Data are collected on 51 representatives. The data include DISTRICT number, PROFIT (net profit margin for all orders placed through the representative—the de-pendent variable of interest), AREA (of the district in thousands of square miles), POPN (millions of people in the district), OUTLETS (number of outlets in the district), and COMMIS, which is 1 for full-commission representatives and 0 for partially salaried representatives. 
+
+**Your task** 
+
+**Part A** : Use the data to perform a multiple regression analysis. Find out if the variables suspected by the managers as having an effect on PROFIT actually do have an effect; in particular, try to discover if there is a combination effect of COMMIS and OUTLETS. Consider whether PROFIT itself or PROFIT divided by OUTLETS works better as a dependent variable. 
+
+**Part B** : Omit variables that show little predictive value. 
+
+**Part C** : Locate and, if possible, correct any serious violations of assumptions. 
+
+**Part D** : Once you have completed Parts A, B, and C, please write a brief report (not to exceed 500 words) to the marketing managers and explain your findings; the managers are not familiar with the technical language of statistics, although they do have an idea what a standard deviation is. 
 
 
