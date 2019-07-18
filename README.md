@@ -180,7 +180,7 @@ Determine and provide the maximum for the two sliders based on the file that you
 Your submission should be either one file named app.R or two files names ui.R and server.R. Assume that the data file is in the same folder as the markdown. This way you do not have to set path. 
 
 
-## Assignment 06
+## Assignment 06 Kaggle Competition
 
 This assignment is based on the Prudential Life Insurance Assessment challenge in Kaggle. Please feel free to explore and learn from what other users have done. This is not an assessment of how well you model; but an assessment of whether you can perform the machine learning workflow and submit your solution to Kaggle successfully. The two learning goals of this assignment are:
 
