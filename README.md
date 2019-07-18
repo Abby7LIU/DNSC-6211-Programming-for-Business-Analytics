@@ -185,11 +185,16 @@ Your submission should be either one file named app.R or two files names ui.R an
 This assignment is based on the Prudential Life Insurance Assessment challenge in Kaggle. Please feel free to explore and learn from what other users have done. This is not an assessment of how well you model; but an assessment of whether you can perform the machine learning workflow and submit your solution to Kaggle successfully. The two learning goals of this assignment are:
 
 1. Create and deploy a workflow for applying the machine learning approach to a problem
+
 2. Submit your solution to Kaggle (you can submit a maximum of two entries for this assignment)
-3. __Part A__ Read and prepare (clean, if needed) the data
-4. __Part B__ Perform exploratory data analysis (based on the nature of the variables and show the visualizations associated with the most important or interesting (that you believe) predictors. Please do not exceed more than 10 visualizations unless really needed. There should be a storyline associated with what you did and why you followed a certain strategy.
-5. __Part C__ Perform the analysis using one or two methods that we covered in class and using multinomial logit (if applicable)
-6. __Part D__ Show the screenshot of your submission on the leaderboard in Kaggle. You will follow the following steps to submit to Kaggle.
+
+   __Part A__ Read and prepare (clean, if needed) the data
+
+   __Part B__ Perform exploratory data analysis (based on the nature of the variables and show the visualizations associated with the most important or interesting (that you believe) predictors. Please do not exceed more than 10 visualizations unless really needed. There should be a storyline associated with what you did and why you followed a certain strategy.
+
+   __Part C__ Perform the analysis using one or two methods that we covered in class and using multinomial logit (if applicable)
+
+   __Part D__ Show the screenshot of your submission on the leaderboard in Kaggle. You will follow the following steps to submit to Kaggle.
 
 _You should find your score on the leaderboard and take a screenshot and provide it to me. Your submission should be_
 
