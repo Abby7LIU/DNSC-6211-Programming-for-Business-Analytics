@@ -25,5 +25,6 @@ Homeworks and Projects for DNSC 6211 Programming for Business Analytics
 
 ### - Python (Jupyter notebook and spyder)
 1. [Assignment 8: Basic Python commnents](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/A08_G44206031.ipynb)
+2. [Assignment 9: Functions in Spyder](https://github.com/Abby7LIU/Programming-for-Business-Analytics/tree/master/Assignment%209)
 
 
