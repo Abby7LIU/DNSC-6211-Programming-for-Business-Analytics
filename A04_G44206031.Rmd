@@ -1,0 +1,179 @@
+---
+title: "Profit Regression"
+author: "Jingyi(Abby) Liu"
+date: "9/22/2018"
+output:
+  html_document: default
+  pdf_document: default
+---
+```{r}
+setwd('/Users/liujingyi/Documents/MSBA/6211/Homework/4.0/A04_G44206031')
+```
+
+Part A
+1.multiple regression analysis
+```{r}
+# Load the package
+library(ggplot2)
+library(GGally)
+library(MASS)
+library(car)
+```
+
+```{r}
+# Read the file
+df<-read.csv("SalesPerformance.csv", header = TRUE, stringsAsFactors = FALSE)
+```
+
+```{r}
+# Regression use all the variables
+RM1 <- lm(Profit ~ Area + Popn + Outlets + Commis, data = df)
+summary(RM1)
+```
+
+The model above contains all four potential variables. The dependent variable is profit. The summary chart indicates that the regression model has a adjusted r-squared of 0.6215, which is fair enough. However, the p values also show that some variables such as Popn and Commis are not very significant in the model. Commis has the most effect on PROFIT.
+
+```{r}
+# Plot the regression
+plot(RM1)
+```
+
+The plot 1 shows that the residuals are not that random distributed.     
+The plot 2 shows that the some standardized residuals do not fit the line well.    
+The plot 3  and plot 4 show that outliers such as '19', '32', '47' exist.    
+
+2. The combination effect of COMMIS and OUTLETS.    
+(1)First, remove the variable COMMIS
+```{r}
+RM2 <- lm(Profit ~ Area + Popn + Outlets, data = df)
+summary(RM2)
+plot(RM2)
+```
+
+(2)Then, remove the variable OUTLETS
+```{r}
+RM3 <- lm(Profit ~ Area + Popn + Commis, data = df)
+summary(RM3)
+plot(RM3)
+```
+
+(3) Try the model with only 'Commis' and 'Outlets'    
+```{r}
+RM4 <- lm(Profit ~ Outlets + Commis, data = df)
+summary(RM4)
+plot(RM4)
+```
+
+The combination effect of COMMIS and OUTLETS can be evaluated by the the summary tables and plots from all the regression models above. First, the R square is the highest in RM3(0.6272 ), that is the the model that removes OUTLETS, it is even higher than RM1(0.6215). 
+
+The results indicate that the proportion of the variance in the dependent variable that is predictable from the independent variable(s) is decrease with the involvement of OUTLETS. However, the differences between the R squares is not that significant, so we can not conclude the variables have a negative effect to each other. 
+
+From the plots of RM1, RM2 and RM3, it is clear that with the involvement of both COMMIS and OUTLETS, the models fit better to the dataset. Moreover, in RM1, the estimate of  COMMIS and OUTLETS are 0.8301 and 316.7449, the absolute value of which is higher than the absolute in RM2 and RM3, -0.4619 and 310.156. Also, from RM4 with just COMMIS and OUTLETS as variables, p value is the most significant and the residuals are randomly distributed. So we can conclude that the two variables do have combination effect.
+
+
+3. Use Profit/Outlets as the dependent variable. 
+```{r}
+# Add a new column 
+df$Profit_of_outlets<-(df$Profit)/(df$Outlets)
+RM5 <- lm(Profit_of_outlets ~ Popn + Commis + Area, data = df)
+
+summary(RM5)
+summary(RM1)
+
+```
+
+Comparing the summary tables of RM1 and RM5, I find that although the adjusted R-squared decreases, the Pr(>|t|) of all the variables is decrease, suggesting higher level of significance.  
+
+```{r}
+plot(RM5)
+```
+```{r}
+plot(RM1)
+```
+
+The plot 1 shows that the residuals are more random distributed for RM5. 
+The plot 2 shows that the some standardized residuals do not fit the line better for RM5.
+
+The analysis above concludes that use PROFIT divided by OUTLETS works better as a dependent variable than PROFIT itself.
+
+Part B (25 marks): Omit variables that show little predictive value.
+Recall the models above, the three varibles COMMIS, POPN and AREA. Multicollinearity should be examined. 
+```{r}
+vif(RM5)
+```
+
+```{r}
+X <- subset(df,select=-c(Profit_of_outlets,Profit,Outlets,Dist)) 
+ggpairs(X)
+```
+
+The chart above shows that variables POPN and AREA have multicollinearity. Moreover, the the Pr(>|t|) of POPN shows extremely low level of significance. However, if omit POPN, the model only has 3 independent variables. The decision should be made after the summary and plots are analyzed.
+
+Try a new model with PROFIT divided by OUTLETS as a dependent variable and omit POPN.
+
+```{r}
+RM6 <- lm(Profit_of_outlets ~ Area + Commis, data = df)
+summary(RM6)
+plot(RM6)
+```
+
+Comparing RM6 and RM5, we conclude POPN should be omitted.
+
+Part C (25 marks): Locate and, if possible, correct any serious violations of assumptions.
+
+Recall the plots of RM5. Outliers exist: 19,32,47. Of which  19 has the most influence on the model.
+```{r}
+plot(RM5)
+```
+
+Thus, we remove 19 and stored it into a new dataframe.
+```{r}
+df_regression <- df[-(19), ]
+df_regression <- subset(df_regression, select=c(Dist,Area,Commis, Profit_of_outlets))
+```
+
+Lastly, we show the revised model
+```{r}
+Model_regression <- lm(Profit_of_outlets ~ Area + Commis, data = df_regression)
+summary(Model_regression)
+```
+
+Part D (20 marks): Once you have completed Parts A, B, and C, please write a brief report (not to exceed 500 words) to the marketing managers and explain your findings; the managers are not familiar with the technical language of statistics, although they do have an idea what a standard deviation is.
+
+Dear marketing managers,
+
+In order to better evaluate the field sales representatives' performance and how the variables suspected effect the performance, regression models are built and analyzed. The findings and suggestions are listed as follows.
+
+In the original model(RM1), Straightforwardly, ???Profit??? is used as the dependent variable. ???Popn???, ???Area???, ???Commis??? and ???Outlets??? should all be involved. The summary table shows that ???Outlets??? is the most significant while ???Popn??? and ???Outlets??? contributed very little to ???Profit???. The results indicate that sales representatives motivated in a great deal by compensation. With all other variables being equal, a full-commission representative can generate 316.7 more profit than a partially salaried representatives. However, with an increase ???area???, the ???Profit??? only decrease 22.96. Moreover, Pr(>|t|) show low level of significant of ???Area??? and ???Outlets???. The model indicates that 62.15% of the variance in the dependent variable that is predictable from the independent variable. Which is fair enough.
+
+To analyze the combination effect of ???Commis??? and ???Outlets???, we find that with the involvement of both ???Commis???  and ???Outlets???, the models fit better to the dataset. Moreover, in RM1, the estimate of ???Commis???  and ???Outlets??? are 0.8301 and 316.7449, the absolute value of which is higher than the absolute in RM2 and RM3, -0.4619 and 310.156. So we can indicate that the two variables do have combination effect.
+
+As mentioned in the question, ???Profit??? may be inflated for representatives with many outlets. Changing the dependent variable into profit per outlets, we did another regression. The plots and parameters indicate that it is more reasonable to evaluate the performance of sales representatives using profit per outlets, that is divide ???Profit??? by ???Outlets???.
+
+After the dependent variable is determined, we need to examine all the independent variables and remove those are not significant. Note that we only have three variable now, ???Area???, ???Popn??? and ???Commis???. First, examine wether the variables are dependent on each other. In other words, if one variable is highly correlated with another, one of them should be removed. In our case ???Popn??? and ???Area??? is highly correlated.  Moreover,  the analysis above shows that ???Popn??? has a low level of significance. Hence, ???Popn??? should bd removed from the model. 
+
+Lastly, the dataset contains outliers. Outliers refer to the usual or extreme rows that  will effect the model in a great deal. Dist = 19 in our case is the outlier that should be removed. Then we can get our model with profit per outlets as dependent variable and ???Area??? and ???Commis ??? as independent variable.
+
+To sum up, it is more reasonable to use profit per outlet to evaluate the sales representatives' performance. ???Commis??? is the most critical element while ???Area??? also should be considered. The representation should be offered full-commission to be motivated. On the contrary, ???Popn??? should not be considered as it is not significant and is highly correlated to ???Area???. Unusual or extreme situation should be omitted to obtain a fair evaluation. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
