@@ -72,7 +72,7 @@ plot(K, p, type="l",
 ```
 
 
-## [Assignment 2: Functions](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/A02a_G44206031.R)
+## Assignment 2: Functions
 
 ### Part A
 
