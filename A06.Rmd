@@ -1,0 +1,200 @@
+sww---
+title: "A06"
+author: "Jingyi(Abby) Liu"
+date: "2018/10/3"
+output: html_document
+---
+
+```{r}
+getwd()
+```
+Clean the data
+
+1. Read the traning and testing data as dataframes
+```{r}
+train <- read.csv("train.csv",header = TRUE)
+test <- read.csv("test.csv",header = TRUE)
+```
+2.Dummy var the column Product_Info_2
+```{r}
+train$Product_Info_2_char = as.factor(substr(train$Product_Info_2, 1,1))
+train$Product_Info_2_num = as.factor(substr(train$Product_Info_2, 2,2))
+test$Product_Info_2_char = as.factor(substr(test$Product_Info_2, 1,1))
+test$Product_Info_2_num = as.factor(substr(test$Product_Info_2, 2,2))
+```
+
+
+3. Delete the columns with null value rows larger than 10000
+```{r}
+train1 <- subset(train, select = -c(Product_Info_2, Employment_Info_6, Insurance_History_5, Family_Hist_2,Family_Hist_3,Family_Hist_4,Family_Hist_5,  Medical_History_10, Medical_History_15, Medical_History_24, Medical_History_32) )
+```
+4. Omitting the rows with null value
+```{r}
+train1[train1==""]  <- NA    
+sapply(train1, function(x) sum(is.na(x)) )
+```
+
+```{r}
+trainnm <- na.omit(train1)
+```
+```{r}
+sum(is.na(trainnm))
+```
+
+
+5. Conbime the similar columns
+
+(1)Combine all the columns with medical history
+```{r}
+Medical_Histrory <- rowSums(trainnm[,32:68])
+trainnm$Medical_Histrory <- Medical_Histrory
+Data_train <- trainnm[,-c(32:68)]
+
+```
+(2)Combine all the columns with medical keywords
+```{r}
+Medical_Keywords <- rowSums(Data_train[,32:79])
+Data_train$Medical_Keywords <- Medical_Keywords
+Data_train  <- Data_train [,-c(32:79)]
+```
+
+Explore the data
+(1)Make the factors
+```{r}
+Data_train$Response <- as.factor(Data_train$Response)
+```
+
+
+
+(2)Nature of the data
+```{r}
+table(Data_train$Product_Info_1)
+table(Data_train$Product_Info_2_char)
+table(Data_train$Product_Info_2_num)
+summary(Data_train$Ins_Age)
+summary(Data_train$Ht)
+summary(Data_train$Wt)
+summary(Data_train$BMI)
+summary(Data_train$Employment_Info_1)
+summary(Data_train$InsuredInfo_4)
+##summary(Data_train$Medical_Histrory)
+summary(Data_train$Medical_Keywords)
+
+```
+
+
+
+
+```{r}
+library(ggplot2)
+library(GGally)
+library(MASS)
+library(car)
+library(nnet)
+```
+Plot
+
+(1) Plot the hisgram of the target 'Response'
+```{r}
+g <- ggplot(data = Data_train, aes(Response, fill = Response)) +
+  geom_bar() +
+  scale_fill_discrete(name="Response", labels=c("1", "2",'3','4','5','6','7','8')) +
+  scale_x_discrete(breaks=c("1", "2",'3','4','5','6','7','8'),
+                   labels=c("1", "2",'3','4','5','6','7','8'))
+g
+```
+(2)plot the variable Product_Info_2_char
+```{r}
+g <- ggplot(data = Data_train, aes(Product_Info_2_char, fill = Product_Info_2_char)) +
+  geom_bar() +
+  scale_fill_discrete(name="Product_Info_2_char", labels=c("A", "B", 'C', 'D' ,'E')) +
+  scale_x_discrete(breaks=c("A", "B", 'C', 'D' ,'E'),
+                   labels=c("A", "B", 'C', 'D' ,'E'))
+g
+```
+
+(3)Multicollinearity should be examined. 
+
+From the following plots, multicollinearity exists between Weight and BMI, however, it is not very significant. 
+```{r}
+X <- subset(Data_train,select= c(Ht, Wt, BMI)) 
+ggpairs(X)
+```
+
+
+
+```{r}
+ggplot(Data_train, aes(InsuredInfo_1)) + geom_bar(aes(fill=factor(Response)))
+```
+
+```{r}
+ggplot(Data_train, aes(x=Wt, y=Response,color = Response )) + geom_point(size=3,shape=21)
+```
+
+```{r}
+ggplot(Data_train, aes(x=Ins_Age, y=Response,color = Response )) + geom_point(size=3,shape=21)
+```
+
+```{r}
+library(dplyr)
+df.train <- select(Data_train, select = -c(Id))
+head(df.train)
+```
+
+```{r}
+mod_log_Ius <- multinom(formula = Response ~ ., data = df.train, MaxNWts = 7000)
+```
+
+```{r}
+test1 <- subset(test, select = -c(Product_Info_2, Employment_Info_6, Insurance_History_5, Family_Hist_2,Family_Hist_3,Family_Hist_4,Family_Hist_5,  Medical_History_10, Medical_History_15, Medical_History_24, Medical_History_32) )
+```
+
+```{r}
+test1[test1==""]  <- NA    
+sapply(test1, function(x) sum(is.na(x)) )
+```
+```{r}
+md_test <- test1$Medical_History_1
+md_test <- na.omit(md_test)
+mean(md_test)
+```
+```{r}
+ test1[is.na(test1)]<- mean(md_test)
+```
+
+```{r}
+sum(is.na(test1))
+```
+```{r}
+Medical_Histrory_Test <- rowSums(test1[,32:68])
+test1$Medical_Histrory <- Medical_Histrory_Test
+Data_test <- test1[,-c(32:68)]
+```
+
+```{r}
+Medical_Keywords_Test <- rowSums(Data_test[,32:79])
+Data_test$Medical_Keywords <- Medical_Keywords_Test
+Data_test  <- Data_test [,-c(32:79)]
+```
+
+
+```{r}
+df.test <- subset(Data_test, select = -c(Id))
+```
+
+
+```{r}
+model.fitted <- predict(mod_log_Ius, df.test)
+```
+
+```{r}
+predicted <- data.frame(test$Id)
+predicted$Response <- model.fitted
+names(predicted)[names(predicted)=="test.Id"]="Id"
+```
+
+```{r}
+write.csv(predicted, file = 'predicted.csv', row.names = FALSE)
+```
+
+
