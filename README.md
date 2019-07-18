@@ -6,7 +6,7 @@ Homeworks and Projects for DNSC 6211 Programming for Business Analytics
 3. [Assignmnet 3: Logistic Regression](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/Assignment%203:%20Melvin’s%20Performance%20Anaylsis.pdf)
 4. [Assignment 4: Evaluating Sales Performance](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/A04_G44206031.Rmd)
 
-## Assignment 1: Basic practices
+## Assignment 01: Basic practices
 
 ### Part A
 
@@ -72,7 +72,7 @@ plot(K, p, type="l",
 ```
 
 
-## Assignment 2: Functions
+## Assignment 02: Functions
 
 ### Part A
 
@@ -115,7 +115,7 @@ c. Draw 50 samples of size 45 from the sampling frame in part a, and plot the sa
 
 d. Explain CLT in your own words in one or two sentences based on your answers to parts b and c. 
 
-## Assignmnet 3: Logistic Regression
+## Assignmnet 03: Logistic Regression
 
  Use the file **kicksfootball.csv** for this assignment. 
 
@@ -147,7 +147,7 @@ Using ggplot, plot the logistic models for his performance in matches as well as
 
 **plot**. Make sure that the plot has a title, labels for X and Y axes, and a legend. 
 
-## Assignment 4: Evaluating Sales Performance
+## Assignment 04: Evaluating Sales Performance
 
 The marketing managers of an office products company have some difficulty in evaluating the field sales representatives' performance. The representatives travel among the outlets for the company's products, create displays, try to increase volume, introduce new products, and discover any problems that the outlets are having with the company's products. The job involves a great deal of travel time. The marketing managers believe that one important factor in the representatives' performance is the motivation to spend a great deal of time on the road. Other variables also have an effect. Some sales districts have more potential than others, either because of differences in population or differences in the number of retail outlets. Large districts are difficult because of the extra travel time. One important variable is compensation. Some of the representatives are paid a salary plus a commission on sales; others work entirely for a larger commission on sales. The marketing managers suspect that there is a difference between the two groups in their effectiveness, although some of them argue that the important factor is the combination of commission status and number of outlets. In particular, they suspect that commission- only representatives with many outlets to cover are highly productive. Also, the managers suspect that profit may be inflated for representatives with many outlets; they would prefer measuring profit per outlet. Data are collected on 51 representatives. The data include DISTRICT number, PROFIT (net profit margin for all orders placed through the representative—the de-pendent variable of interest), AREA (of the district in thousands of square miles), POPN (millions of people in the district), OUTLETS (number of outlets in the district), and COMMIS, which is 1 for full-commission representatives and 0 for partially salaried representatives. 
 
@@ -161,7 +161,7 @@ The marketing managers of an office products company have some difficulty in eva
 
 **Part D** : Once you have completed Parts A, B, and C, please write a brief report (not to exceed 500 words) to the marketing managers and explain your findings; the managers are not familiar with the technical language of statistics, although they do have an idea what a standard deviation is. 
 
-## Assignment 5：R shiny 
+## Assignment 05：R shiny 
 
 This assignment is based on RShiny. You need to build a Shiny application. The dataset for this application comes from Open Charlotte. 
 
