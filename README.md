@@ -26,6 +26,7 @@ Homeworks and Projects for DNSC 6211 Programming for Business Analytics
 ![Page 3](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/Page%203.png)
 
 ### - Python (Jupyter notebook and spyder)
+#### -- Assignments
 1. [Assignment 8: Basic Python commnents](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/A08_G44206031.ipynb)
 2. [Assignment 9: Functions in Spyder](https://github.com/Abby7LIU/Programming-for-Business-Analytics/tree/master/Assignment%209)
 3. [Assignmnet 10(Group Project): NY Flights information](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/A10_GROUP1.ipynb)
@@ -33,5 +34,13 @@ Homeworks and Projects for DNSC 6211 Programming for Business Analytics
 --- [Kaggle website](https://www.kaggle.com/blastchar/telco-customer-churn/home)
 5. [Assignment 12: Web Scraping](https://github.com/Abby7LIU/Programming-for-Business-Analytics/tree/master/Assignment%2012:%20Web%20Scraping)
 6. [Assignment 13 : TextBlob and Web Scraping](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/A13_G44206031.ipynb)
+
+#### -- Project: Interactive map 
+- [Interactive map: Python Code](https://github.com/Abby7LIU/DNSC-6211-Programming-for-Business-Analytics/blob/master/folium1.ipynb)
+- [Dataset: Stores' information]()
+
+Run the code and get 14 html files, each of them is an interact map for the store. Click the orange circle represented the store and the customers who shop there will be highlighted. 
+
+
 
 
