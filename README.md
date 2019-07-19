@@ -27,5 +27,8 @@ Homeworks and Projects for DNSC 6211 Programming for Business Analytics
 1. [Assignment 8: Basic Python commnents](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/A08_G44206031.ipynb)
 2. [Assignment 9: Functions in Spyder](https://github.com/Abby7LIU/Programming-for-Business-Analytics/tree/master/Assignment%209)
 3. [Assignmnet 10(Group Project): NY Flights information](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/A10_GROUP1.ipynb)
+4. [Assignment 11: Kaggle Competition(Telco Customer Churn)](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/A11_G44206031.ipynb)
+--- [Kaggle website](https://www.kaggle.com/blastchar/telco-customer-churn/home)
+
 
 
