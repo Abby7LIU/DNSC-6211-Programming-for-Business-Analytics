@@ -41,7 +41,7 @@ Homeworks and Projects for DNSC 6211 Programming for Business Analytics
 
 Run the code and get 14 html files, each of them is an interact map for the store. Click the orange circle represented the store and the customers who shop there will be highlighted. 
 
-__Overview of the output interactive map:__
+###### - Overview of the output interactive maps:
 ![map 1](https://github.com/Abby7LIU/DNSC-6211-Programming-for-Business-Analytics/blob/master/map%201.png)
 ![map 2](https://github.com/Abby7LIU/DNSC-6211-Programming-for-Business-Analytics/blob/master/map%202.png)
 
