@@ -1,4 +1,4 @@
-# Programming-for-Business-Analytics
+# DNSC 6211 Programming-for-Business-Analytics
 ![Front Page](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/GWU.png)
 ##
 Homeworks and Projects for DNSC 6211 Programming for Business Analytics
