@@ -1,6 +1,6 @@
 # Programming-for-Business-Analytics
 Homeworks and Projects for DNSC 6211 Programming for Business Analytics
-![Front Page](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/front%20page.png)
+![Front Page](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/GWU.png)
 
 ### - R stuido, R markdown and R shiny
 #### -- Assignments
