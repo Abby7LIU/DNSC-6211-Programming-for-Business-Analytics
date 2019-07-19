@@ -32,6 +32,6 @@ Homeworks and Projects for DNSC 6211 Programming for Business Analytics
 4. [Assignment 11: Kaggle Competition(Telco Customer Churn)](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/A11_G44206031.ipynb)
 --- [Kaggle website](https://www.kaggle.com/blastchar/telco-customer-churn/home)
 5. [Assignment 12: Web Scraping](https://github.com/Abby7LIU/Programming-for-Business-Analytics/tree/master/Assignment%2012:%20Web%20Scraping)
-
+6. [Assignment 13 : TextBlob and Web Scraping](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/A13_G44206031.ipynb)
 
 
