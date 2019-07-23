@@ -1,6 +1,12 @@
 ![Front Page](https://github.com/Abby7LIU/Programming-for-Business-Analytics/blob/master/GWU.png)
 # DNSC 6211 Programming-for-Business-Analytics
-Homeworks and Projects for DNSC 6211 Programming for Business Analytics
+#### Learning Objectives (From Course Sllybus):  
+__Students who successfully complete the course requirements will be able to:__
+1. Write scripts and complete programs in Python and R
+2. Recognize different sources of data and learn how to access those data
+3. Design develop and deliver reproducible data products in R and Python
+4. Use Python and R for analytics workflow for descriptive, predictive and prescriptive analytics
+5. Participate in and get evaluated in competitive analytics platforms like Kaggle.
 
 ### - R stuido, R markdown and R shiny
 #### -- Assignments
